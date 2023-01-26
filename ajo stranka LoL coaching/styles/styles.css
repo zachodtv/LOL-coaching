@@ -1,0 +1,752 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  margin: 0 5% 0% 5%;
+  padding-top: 13.5vh;
+  margin-bottom: 20%;
+}
+body {
+  width: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 700px) {
+  [class*="features"] [class*="foto1"] {
+    width: 100%;
+    background-image: none;
+  }
+}
+
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+  --tertiary-color: #626797;
+  --quatrenary-color: aquamarine;
+}
+.darkmode {
+  --primary-color: White;
+  --secondary-color: black;
+  --tertiary-color: rgb(59, 60, 70);
+  --quatrenary-color: black;
+}
+
+/*          menubar           */
+
+header {
+  margin-left: none;
+  height: 8vh;
+  width: 100vw;
+  min-height: 65px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  transition: 0, 4s;
+  z-index: 13048;
+}
+.logo {
+  width: 7vh;
+}
+.navbar {
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  height: 8vh;
+}
+.navbar > .a {
+  float: left;
+  font-size: 16px;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 8vh;
+  padding-top: 2.7vh;
+  width: 15vh;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  height: 8vh;
+  padding-top: 1vh;
+  margin-right: 2vw;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  width: 15vh;
+  margin-left: 2vh;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--secondary-color);
+  color: rgb(245, 156, 156);
+  transition: 0.4s;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--primary-color);
+  z-index: 1;
+  margin-top: 0.8vh;
+}
+.dropdown-content a {
+  float: none;
+  color: var(--primary-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: var(--secondary-color);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.top {
+  margin-left: 7.9vh;
+  margin-bottom: -0.5vh;
+  max-width: 3vh;
+  border-radius: 50%;
+}
+.jngl {
+  margin-left: 4.7vh;
+  margin-bottom: -0.5vh;
+  max-width: 3vh;
+  border-radius: 50%;
+}
+.mid {
+  margin-left: 8vh;
+  margin-bottom: -0.5vh;
+  max-width: 2.95vh;
+  border-radius: 50%;
+}
+.bot {
+  margin-left: 7.5vh;
+  margin-bottom: -0.5vh;
+  max-width: 3vh;
+  border-radius: 50%;
+}
+.supp {
+  margin-left: 3.2vh;
+  margin-bottom: -0.5vh;
+  max-width: 2.8vh;
+  border-radius: 50%;
+}
+.sun {
+  width: 25px;
+  height: auto;
+  padding-top: 2.25vh;
+}
+
+.sun:hover {
+  cursor: pointer;
+}
+
+/*      fotka titulna     */ /*        titulok        */
+
+.container {
+  z-index: 1;
+  padding-top: 8vh;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+  background-color: var(--secondary-color);
+  margin-bottom: 0;
+}
+.foto1 {
+  height: 120%;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/heroimage/bg3-main.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.darkmode .foto1 {
+  opacity: 0.4;
+}
+.container > .title {
+  display: block;
+  width: 100vw;
+  max-height: 100%;
+  margin-top: -80vh;
+}
+.container > .title > h1 {
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: 14vh;
+  text-transform: uppercase;
+  padding-top: 9vh;
+  color: gold;
+  text-shadow: black 0px 0 20px;
+  text-align: center;
+}
+.container > .title > blockquote {
+  font-style: normal;
+  font-size: 4vh;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 8vh;
+  color: rgb(255, 255, 255);
+  text-shadow: black 0px 0 20px;
+}
+
+/*        features        */
+
+.features {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 30vh;
+}
+.text {
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-left: 5%;
+}
+.text > h2 {
+  font-size: 6vh;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5%;
+  color: var(--primary-color);
+}
+.text > p {
+  font-size: 2.2vh;
+  font-family: Roboto, sans-serif;
+  line-height: 5vh;
+  font-weight: lighter;
+  color: var(--primary-color);
+  width: 90%;
+}
+.features > .fun {
+  display: block;
+  height: 50vh;
+  margin: 20% 5% 20% 5%;
+}
+.features > .fun > .fphoto {
+  display: inline-block;
+  width: 30%;
+  height: 50vh;
+  background-image: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/features/fun.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+}
+.features > .s-improvement {
+  height: 50vh;
+  margin: 10% 5% 15% 5%;
+
+  padding-right: 5%;
+}
+.features > .s-improvement > .s-photo {
+  display: block;
+  width: 30%;
+  height: 50vh;
+  background-image: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/features/skill-improvement.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.features > .coaches-count {
+  display: block;
+  height: 50vh;
+  margin: 10% 5% 25% 5%;
+  float: left;
+}
+.features > .coaches-count > .c-photo {
+  display: inline-block;
+  width: 35%;
+  height: 45vh;
+  background-size: 80%;
+  margin-left: 15%;
+  margin-top: -3vh;
+}
+.features > .satisfaction {
+  display: block;
+  height: 50vh;
+  margin: 10% 5% 15% 5%;
+  padding-right: 5%;
+}
+.features > .satisfaction > .sa-photo {
+  display: block;
+  width: 30%;
+  height: 50vh;
+  background-image: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/features/satisfaction.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*         ceo of company       */
+
+.ceo-box {
+  display: block;
+  width: 80%;
+  height: 70vh;
+  background-color: var(--quatrenary-color);
+  margin-left: 10%;
+}
+.darkmode .ceo-box {
+  width: 81%;
+  height: 72vh;
+  border: #676e5b;
+  border-style: solid;
+  border-color: #676e5b;
+  border-width: 1vh;
+}
+.ceo-bg {
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 1;
+}
+.ceo-box > .quotes {
+  display: block;
+  height: 15vh;
+  padding-left: 10vw;
+  padding-top: 5vh;
+}
+.ceo-box > .quotes > .quotes-pic {
+  background-image: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/quotes-box/quotes_image.png");
+  height: 15vh;
+  width: 15vh;
+  background-size: 75%;
+  background-repeat: no-repeat;
+}
+.ceo-box > .ceo-text {
+  width: 100%;
+  height: 35vh;
+}
+.ceo-box > .ceo-text > p {
+  font-weight: lighter;
+  font-size: 3vh;
+  padding: 5% 5% 0% 5%;
+}
+.ceo-box > .ceo-info {
+  height: 20vh;
+  width: 100%;
+}
+.ceo-box > .ceo-info > .ceo-photo {
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/about/quotes-box/Screenshot 2022-10-09 at 12.57.01.png");
+  height: 15vh;
+  width: 15vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: 5vw;
+  float: left;
+}
+.ceo-box > .ceo-info > .ceo-info-text {
+  background-color: var(--quatrenary-color);
+  height: 15vh;
+  width: 80%;
+  margin-left: 20%;
+}
+.ceo-box > .ceo-info > .ceo-info-text > .name {
+  height: 8vh;
+  width: 100%;
+  padding-top: 5vh;
+  padding-left: 2vw;
+}
+.ceo-box > .ceo-info > .ceo-info-text > .name > p {
+  font-size: 2vh;
+  font-family: sans-serif;
+}
+.ceo-box > .ceo-info > .ceo-info-text > .proffesion {
+  height: 12vh;
+  width: 100%;
+  padding-left: 1vw;
+}
+.ceo-box > .ceo-info > .ceo-info-text > .proffesion > h2 {
+  font-size: 3vh;
+  font-family: sans-serif;
+}
+
+/*        footer        */
+
+footer {
+  width: 100%;
+  height: 40vh;
+  background-color: var(--tertiary-color);
+  display: block;
+  z-index: 101010;
+}
+footer > .social-media {
+  width: 100%;
+  height: 14vh;
+  justify-content: space-around;
+  padding-left: 40%;
+  display: block;
+  padding-top: 7vh;
+}
+footer > .social-media > .twitter {
+  display: block;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/header--footer/social media/twitter.png");
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  background-size: 125%;
+  border-radius: 50%;
+  margin-right: 1vw;
+  float: left;
+  background-position-y: center;
+  background-position-x: center;
+}
+footer > .social-media > .fb {
+  display: inline-block;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/header--footer/social media/fb.png");
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  background-size: 125%;
+  border-radius: 50%;
+  margin-right: 0.75vw;
+  background-position-y: center;
+  background-position-x: center;
+}
+footer > .social-media > .ytb {
+  display: inline-block;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/header--footer/social media/ytb.png");
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  background-size: 125%;
+  border-radius: 50%;
+  margin-right: 0.75vw;
+  background-position-y: center;
+  background-position-x: center;
+}
+footer > .social-media > .dc {
+  display: inline-block;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/header--footer/social media/dc.jpeg");
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  background-size: 135%;
+  border-radius: 50%;
+  margin-right: 0.75vw;
+  background-position-y: center;
+  background-position-x: center;
+}
+footer > .social-media > .ig {
+  display: inline-block;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/header--footer/social media/ig.png");
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 3vw;
+  background-size: 125%;
+  border-radius: 50%;
+  background-position-y: center;
+  background-position-x: center;
+}
+footer > .social-media > .fb:hover,
+footer > .social-media > .twitter:hover,
+footer > .social-media > .ytb:hover,
+footer > .social-media > .ig:hover {
+  background-size: 110%;
+  background-position: center;
+  transition: 0.1s;
+}
+footer > .social-media > .dc:hover {
+  background-size: 125%;
+  background-position: center;
+  transition: 0.1s;
+}
+footer > .links {
+  width: 100%;
+  height: 6vh;
+  justify-content: space-around;
+  display: block;
+  padding-top: 1.5vh;
+  padding-left: 31.5%;
+}
+footer > .links > a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: white;
+  justify-content: space-around;
+  font-family: sans-serif;
+  font-size: 2.5vh;
+  margin-right: 2vw;
+}
+footer > .company {
+  width: 100%;
+  height: 10vh;
+  padding-left: 43.5%;
+  padding-top: 1vh;
+}
+footer > .company > p {
+  color: black;
+}
+
+/*         about.html         */
+
+/*         video box         */
+
+.video-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  size: cover;
+  padding-top: 8vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
+}
+.video-box > .video {
+  width: 100%;
+  height: auto;
+}
+.video-box > button {
+  display: block;
+  height: 10%;
+  width: 20%;
+  background-color: rgb(59, 60, 70);
+  z-index: 3;
+  position: absolute;
+  margin-top: -35%;
+  margin-left: 40%;
+  text-decoration: none;
+  border: none;
+  opacity: 0.5;
+}
+
+.video-box > button > a {
+  font-weight: lighter;
+  color: white;
+  font-size: 5vh;
+  opacity: none;
+  text-decoration: none;
+  display: block;
+  font-size: auto;
+}
+.video-box > button :hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 1s;
+}
+button:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+/*        privacy + terms       */
+
+.privacy-terms {
+  margin: 0 20% 10% 20%;
+}
+.privacy-terms > h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-bottom: 4vh;
+  color: var(--primary-color);
+}
+
+/*        IG+FB -> PAGE WAS NOT FOUND       */
+
+.error {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*          map/roles         */
+.choose-coaches {
+  width: 100%;
+  height: 140vh;
+  /* background-color: aquamarine;*/
+  z-index: 1;
+  display: block;
+  margin-top: 20vh;
+}
+.choose-coaches > .heading-choose-coaches {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  display: block;
+  /*background-color: red;*/
+  margin-bottom: 8vh;
+}
+.choose-coaches > .heading-choose-coaches > h2 {
+  font-size: 12vh;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  color: var(--primary-color);
+}
+.choose-coaches > .role-boxes-3 {
+  width: 100%;
+  height: 50vh;
+  /*background-color: yellow !important;*/
+  display: inline-block;
+  z-index: 2;
+  margin-bottom: 12vh;
+  overflow: hidden;
+}
+.choose-coaches > .role-boxes-3 > a > .top-box {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  margin-right: 2%;
+  margin-left: 1%;
+  overflow: hidden;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/main/map:roles/kayle.gif");
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  border-radius: 5%;
+}
+.choose-coaches > .role-boxes-3 > a > .top-box > h2 {
+  padding-top: 80%;
+  font-size: 5vh;
+  padding-left: 40%;
+  color: rgb(243, 250, 197);
+  text-shadow: black 5px 0 20px;
+}
+.choose-coaches > .role-boxes-3 .jngl-box {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  margin-right: 3.6%;
+  margin-left: 1%;
+  overflow: hidden;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/main/map:roles/diana.gif");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: left;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  border-radius: 5%;
+}
+.choose-coaches > .role-boxes-3 .jngl-box > h2 {
+  padding-top: 80%;
+  font-size: 5vh;
+  padding-left: 30%;
+  color: rgb(243, 250, 197);
+  text-shadow: black 5px 0 20px;
+}
+.choose-coaches > .role-boxes-3 .mid-box {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: -1%;
+  overflow: hidden;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/main/map:roles/yasuo.gif");
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+  border-radius: 5%;
+}
+.choose-coaches > .role-boxes-3 .mid-box > h2 {
+  padding-top: 80%;
+  font-size: 5vh;
+  padding-left: 40%;
+  color: rgb(243, 250, 197);
+  text-shadow: black 5px 0 20px;
+}
+.choose-coaches > .role-boxes-2 {
+  width: 100%;
+  height: 50vh;
+  /*background-color: green;*/
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+}
+.choose-coaches > .role-boxes-2 > a > .adc-box {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: #ddd;
+  margin-left: 15%;
+  margin-right: 10%;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/main/map:roles/ezreal.gif");
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  transition: all 0.5s ease;
+}
+.choose-coaches > .role-boxes-2 > a > .adc-box > h2 {
+  padding-top: 80%;
+  font-size: 5vh;
+  padding-left: 40%;
+  color: rgb(243, 250, 197);
+  text-shadow: black 5px 0 20px;
+}
+.choose-coaches > .role-boxes-2 > a > .supp-box {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: #ddd;
+  z-index: 2;
+  background: url("/Users/adam/Desktop/skola/AIO/ajo stranka LoL coaching/images/main/map:roles/karma.gif");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  transition: all 0.5s ease;
+}
+.choose-coaches > .role-boxes-2 > a > .supp-box > h2 {
+  padding-top: 80%;
+  font-size: 5vh;
+  padding-left: 25%;
+  color: rgb(243, 250, 197);
+  text-shadow: black 5px 0 20px;
+}
+.choose-coaches > .role-boxes-3 > a > .top-box:hover,
+.choose-coaches > .role-boxes-3 > a > .jngl-box:hover,
+.choose-coaches > .role-boxes-3 > a > .mid-box:hover,
+.choose-coaches > .role-boxes-2 > a > .adc-box:hover,
+.choose-coaches > .role-boxes-2 > a > .supp-box:hover {
+  transform: scale(1.05);
+  max-width: 30%;
+  transition: 1s;
+  cursor: pointer;
+  color: rgb(234, 255, 99);
+  border-radius: 20%;
+}
+.choose-coaches > .role-boxes-3 > a > .top-box > h2:hover,
+.choose-coaches > .role-boxes-3 > a > .top-box:hover,
+.choose-coaches > .role-boxes-3 > a > .jngl-box:hover,
+.choose-coaches > .role-boxes-3 > a > .jngl-box > h2:hover,
+.choose-coaches > .role-boxes-3 > a > .mid-box:hover,
+.choose-coaches > .role-boxes-3 > a > .mid-box > h2:hover,
+.choose-coaches > .role-boxes-2 > a > .adc-box:hover,
+.choose-coaches > .role-boxes-2 > a > .adc-box > h2:hover,
+.choose-coaches > .role-boxes-2 > a > .supp-box:hover,
+.choose-coaches > .role-boxes-2 > a > .supp-box > h2:hover {
+  color: rgb(234, 255, 99);
+  cursor: pointer;
+  transition: 1s;
+}
